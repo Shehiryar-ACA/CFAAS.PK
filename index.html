@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #003366;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: none; /* Initially hide all sections */
+        }
+        #intro {
+            display: block; /* Show the intro section by default */
+        }
+        h2 {
+            color: #003366;
+            font-size: 1.8em;
+        }
+        .services, .contact {
+            margin-top: 10px;
+        }
+        .service-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .service-item:last-child {
+            border: none;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        footer p {
+            margin: 0;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .nav-buttons button {
+            margin: 0 10px;
+            padding: 10px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .nav-buttons button:hover {
+            background-color: #00509e;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>CFAAS</h1>
+    <p>Chartered Financial Accounting and Advisory Services</p>
+</header>
+
+<div class="container">
+    <div class="nav-buttons">
+        <button onclick="showSection('intro')">Introduction</button>
+        <button onclick="showSection('services')">Services</button>
+        <button onclick="showSection('contact')">Contact</button>
+    </div>
+
+    <!-- Introduction Section -->
+    <section id="intro">
+        <h2>Introduction</h2>
+        <p>Welcome to CFAAS, where we provide specialized financial accounting and advisory services tailored to meet the unique needs of your business. 
+           Our team of experienced Chartered Accountants is committed to helping your business achieve success through precise financial management 
+           and strategic insights.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Bookkeeping</h3>
+            <p>Efficient and accurate bookkeeping services to keep your financial records in top shape.</p>
+        </div>
+        <div class="service-item">
+            <h3>Financial Statements</h3>
+            <p>Comprehensive financial statements tailored to reflect the true value of your business.</p>
+        </div>
+        <div class="service-item">
+            <h3>Feasibility Studies</h3>
+            <p>Conducting thorough feasibility studies to guide your business decisions with confidence.</p>
+        </div>
+        <div class="service-item">
+            <h3>Financial Projections</h3>
+            <p>Projecting financial outcomes to prepare your business for the future.</p>
+        </div>
+        <div class="service-item">
+            <h3>Due Diligence</h3>
+            <p>Comprehensive due diligence to assess potential investments and opportunities.</p>
+        </div>
+        <div class="service-item">
+            <h3>Business Process Reengineering (BPR)</h3>
+            <p>Optimizing your business processes for increased efficiency and growth.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you. Whether you’re looking for accounting support or financial advice, our team is here to assist. Reach out through the following:</p>
+        <p><strong>Email:</strong> <a href="mailto:shehiryar@cfaas.online">shehiryar@cfaas.online</a></p>
+        <p><strong>Phone:</strong> +92 3405012432</p>
+        <p><strong>Address:</strong> Secor A behria Enclave, Islamabad, Pakistan</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.style.display = 'none'; // Hide all sections
+        });
+        document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+    }
+</script>
+
+</body>
+</html>
