@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
-    <!-- Favicon path with ?raw=true -->
     <link rel="icon" href="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/ICO.ico?raw=true" type="image/x-icon">
     <style>
         body {
@@ -20,24 +19,19 @@
             padding: 10px 20px;
             display: flex;
             align-items: center;
-            justify-content: space-between;
         }
         .logo {
             display: flex;
             align-items: center;
-            margin-left: 20px; /* Adjusts the margin from the left side */
         }
         .logo img {
-            width: 160px; /* Increased logo size */
+            width: 160px;
             height: auto;
-            margin-right: 20px; /* Space between logo and text */
         }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
-        }
-        header p {
-            font-size: 1.2em;
+        .logo-icon {
+            width: 40px;
+            height: auto;
+            margin-right: 15px;
         }
         .container {
             max-width: 1500px;
@@ -54,21 +48,6 @@
         }
         #intro {
             display: block; /* Show the intro section by default */
-        }
-        h2 {
-            color: #003366;
-            font-size: 1.8em;
-        }
-        .services, .contact {
-            margin-top: 10px;
-        }
-        .service-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .service-item:last-child {
-            border: none;
         }
         footer {
             background-color: #003366;
@@ -103,11 +82,10 @@
 <body>
 
 <header>
+    <img class="logo-icon" src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/ICO.ico?raw=true" alt="Icon">
     <div class="logo">
-        <!-- Updated logo path with ?raw=true -->
         <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/logo.jpg?raw=true" alt="CFAAS Logo">
     </div>
-    <p>Chartered Financial Accounting and Advisory Services</p>
 </header>
 
 <div class="container">
@@ -117,7 +95,6 @@
         <button onclick="showSection('contact')">Contact</button>
     </div>
 
-    <!-- Introduction Section -->
     <section id="intro">
         <h2>Introduction</h2>
         <p>Welcome to CFAAS, where we provide specialized financial accounting and advisory services tailored to meet the unique needs of your business. 
@@ -125,7 +102,6 @@
            and strategic insights.</p>
     </section>
 
-    <!-- Services Section -->
     <section class="services" id="services">
         <h2>Our Services</h2>
         <div class="service-item">
@@ -154,7 +130,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Contact Us</h2>
         <p>We would love to hear from you. Whether you’re looking for accounting support or financial advice, our team is here to assist. Reach out through the following:</p>
@@ -172,9 +147,9 @@
     function showSection(sectionId) {
         const sections = document.querySelectorAll('section');
         sections.forEach(section => {
-            section.style.display = 'none'; // Hide all sections
+            section.style.display = 'none';
         });
-        document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        document.getElementById(sectionId).style.display = 'block';
     }
 </script>
 
