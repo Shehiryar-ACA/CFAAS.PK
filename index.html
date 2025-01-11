@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
+    <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
         /* General Styles */
@@ -15,23 +16,26 @@
             background-color: #f8f8f8;
         }
         header {
-            background-color: #003366;
+            background-color: #003366; /* Deep blue */
             color: #ffffff;
             padding: 10px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .logo {
-            flex-grow: 1;
-            text-align: center;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-        .logo img {
-            width: 300px;
+        .logo-container img {
+            width: 50px;
             height: auto;
+        }
+        .logo-container .site-title {
+            font-size: 1.5em;
+            font-weight: bold;
         }
         nav {
             display: flex;
@@ -51,14 +55,15 @@
             text-decoration: none;
             padding: 10px 20px;
             display: block;
+            transition: background-color 0.3s;
         }
         nav ul li a:hover {
-            background-color: #00509e;
+            background-color: #0073e6; /* Lighter blue */
         }
         nav ul li ul {
             display: none;
             position: absolute;
-            background-color: #00509e;
+            background-color: #00509e; /* Medium blue */
             padding: 0;
             margin: 0;
             min-width: 200px;
@@ -72,132 +77,65 @@
             color: white;
         }
         nav ul li ul li a:hover {
-            background-color: #0073e6;
+            background-color: #003366; /* Deep blue */
         }
         .container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .general-info {
+            text-align: center;
+            padding: 50px 20px;
+            color: #003366;
+        }
+        .general-info h1 {
+            font-size: 2.5em;
+            color: #00509e;
+        }
+        .general-info p {
+            font-size: 1.2em;
+            color: #333;
         }
         footer {
             background-color: #003366;
             color: white;
             text-align: center;
             padding: 15px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
         }
         footer p {
             margin: 0;
-        }
-        section {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/logo.jpg?raw=true" alt="CFAAS Logo">
+    <div class="logo-container">
+        <!-- Logo and Icon -->
+        <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
+        <span class="site-title">CFAAS</span>
     </div>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li>
-                <a href="#about-us">About Us</a>
-                <ul>
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#leadership">Leadership</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#services">Services</a>
-                <ul>
-                    <li><a href="#audit-assurance">Audit & Assurance</a></li>
-                    <li><a href="#accounting">Accounting</a></li>
-                    <li><a href="#advisory">Advisory & Compliance</a></li>
-                    <li><a href="#outsourcing">Outsourcing & Back Office Support</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#resources">Resources</a>
-                <ul>
-                    <li><a href="#blogs">Blogs</a></li>
-                    <li><a href="#latest-info">Latest Info</a></li>
-                    <li><a href="#templates">Sample Template Forms</a></li>
-                </ul>
-            </li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#resources">Resources</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
 </header>
 
 <div class="container">
-    <section id="home">
+    <div id="home" class="general-info">
         <h1>Welcome to CFAAS</h1>
-        <p>Your trusted partner in financial accounting and advisory services.</p>
-    </section>
-
-    <section id="about-us">
-        <h2>About Us</h2>
-        <div id="overview">
-            <h3>Overview</h3>
-            <p>We specialize in delivering bespoke financial solutions for businesses of all sizes.</p>
-        </div>
-        <div id="leadership">
-            <h3>Leadership</h3>
-            <p>Meet our experienced team leading CFAAS to excellence.</p>
-        </div>
-    </section>
-
-    <section id="services">
-        <h2>Services</h2>
-        <div id="audit-assurance">
-            <h3>Audit & Assurance</h3>
-            <p>Comprehensive auditing services tailored to your needs.</p>
-        </div>
-        <div id="accounting">
-            <h3>Accounting</h3>
-            <p>Accurate and timely accounting services to streamline your operations.</p>
-        </div>
-        <div id="advisory">
-            <h3>Advisory & Compliance</h3>
-            <p>Expert advice and compliance solutions to support your business goals.</p>
-        </div>
-        <div id="outsourcing">
-            <h3>Outsourcing & Back Office Support</h3>
-            <p>Efficient back-office solutions to enhance your business performance.</p>
-        </div>
-    </section>
-
-    <section id="resources">
-        <h2>Resources</h2>
-        <div id="blogs">
-            <h3>Blogs</h3>
-            <p>Read our latest insights on finance and business trends.</p>
-        </div>
-        <div id="latest-info">
-            <h3>Latest Info</h3>
-            <p>Stay updated with the latest in finance and business.</p>
-        </div>
-        <div id="templates">
-            <h3>Sample Template Forms</h3>
-            <p>Access useful templates to streamline your operations.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:shehiryar@cfaas.online">shehiryar@cfaas.online</a></p>
-        <p><strong>Phone:</strong> +92 3405012432</p>
-        <p><strong>Address:</strong> Sector A Behria Enclave, Islamabad, Pakistan</p>
-    </section>
+        <p>Your trusted partner for financial accounting and advisory services.</p>
+        <p>Explore our expertise in audit, accounting, advisory, and compliance.</p>
+    </div>
 </div>
 
 <footer>
