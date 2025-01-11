@@ -13,101 +13,153 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: #f8f8f8;
+            background-color: #f0f4f8;
         }
+
+        /* Header and Navigation */
         header {
-            background-color: #003366; /* Deep blue */
+            background-color: #002a5c; /* Deep Blue */
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 15px 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
         }
+
         .logo-container img {
-            width: 50px;
-            height: auto;
+            width: 40px;
+            height: 40px;
         }
+
         .logo-container .site-title {
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
         }
-        nav {
-            display: flex;
-            gap: 15px;
-        }
+
         nav ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
+            gap: 15px;
         }
+
         nav ul li {
             position: relative;
         }
+
         nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 10px 15px;
             display: block;
             transition: background-color 0.3s;
+            font-weight: bold;
         }
+
         nav ul li a:hover {
-            background-color: #0073e6; /* Lighter blue */
+            background-color: #00509e; /* Medium Blue */
         }
+
         nav ul li ul {
             display: none;
             position: absolute;
-            background-color: #00509e; /* Medium blue */
+            background-color: #003366; /* Deep Blue */
             padding: 0;
             margin: 0;
             min-width: 200px;
             z-index: 1000;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
         }
+
         nav ul li:hover ul {
             display: block;
         }
+
         nav ul li ul li a {
             padding: 10px;
             color: white;
         }
+
         nav ul li ul li a:hover {
-            background-color: #003366; /* Deep blue */
+            background-color: #004080;
         }
+
+        /* Section and Content */
         .container {
             max-width: 1200px;
-            margin: auto;
+            margin: 20px auto;
             padding: 20px;
             background: white;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
+
         .general-info {
             text-align: center;
             padding: 50px 20px;
             color: #003366;
         }
+
         .general-info h1 {
             font-size: 2.5em;
             color: #00509e;
         }
+
         .general-info p {
             font-size: 1.2em;
             color: #333;
         }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            color: #002a5c;
+            font-size: 1.8em;
+            border-bottom: 2px solid #00509e;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            line-height: 1.6;
+        }
+
         footer {
-            background-color: #003366;
+            background-color: #002a5c;
             color: white;
             text-align: center;
             padding: 15px 0;
+            margin-top: 30px;
         }
+
         footer p {
             margin: 0;
+        }
+
+        /* Button Styling */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #00509e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #004080;
         }
     </style>
 </head>
@@ -116,16 +168,27 @@
 <header>
     <div class="logo-container">
         <!-- Logo and Icon -->
-        <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
+        <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
         <span class="site-title">CFAAS</span>
     </div>
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li>
+                <a href="#about-us">About Us</a>
+                <ul>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#history">Our History</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#services">Services</a>
+                <ul>
+                    <li><a href="#audit">Audit</a></li>
+                    <li><a href="#consulting">Consulting</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 </header>
@@ -134,8 +197,24 @@
     <div id="home" class="general-info">
         <h1>Welcome to CFAAS</h1>
         <p>Your trusted partner for financial accounting and advisory services.</p>
-        <p>Explore our expertise in audit, accounting, advisory, and compliance.</p>
+        <p>Explore our expertise in audit, consulting, and compliance.</p>
     </div>
+
+    <section id="about-us">
+        <h2>About Us</h2>
+        <p>At CFAAS, we pride ourselves on providing bespoke financial solutions to individuals and businesses. Our team of experts is committed to delivering excellence and building lasting relationships.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of financial services including audit, accounting, tax consultancy, and business advisory to help you achieve your goals efficiently and effectively.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any queries or would like to discuss your financial needs, feel free to reach out. We're here to help!</p>
+    </section>
 </div>
 
 <footer>
