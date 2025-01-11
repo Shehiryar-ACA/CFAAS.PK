@@ -4,222 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
-    <!-- Favicon -->
     <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            color: #333;
-            background-color: #f0f4f8;
+            background-color: #f5f5f5;
         }
 
-        /* Header and Navigation */
         header {
-            background-color: #002a5c; /* Deep Blue */
-            color: #ffffff;
-            padding: 15px 20px;
+            background-color: #003366;
+            color: white;
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
         }
 
-        .logo-container img {
+        .logo-icon {
             width: 40px;
-            height: 40px;
+            height: auto;
+            margin-right: 10px;
         }
 
-        .logo-container .site-title {
-            font-size: 1.8em;
-            font-weight: bold;
+        .logo img {
+            width: 150px;
+            height: auto;
         }
 
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+        nav {
             display: flex;
-            gap: 15px;
         }
 
-        nav ul li {
+        .nav-item {
             position: relative;
+            margin: 0 20px;
+            cursor: pointer;
         }
 
-        nav ul li a {
+        .nav-item > a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
-            display: block;
-            transition: background-color 0.3s;
-            font-weight: bold;
+            display: inline-block;
         }
 
-        nav ul li a:hover {
-            background-color: #00509e; /* Medium Blue */
+        .nav-item > a:hover {
+            background-color: #00509e;
+            border-radius: 5px;
         }
 
-        nav ul li ul {
+        .dropdown {
             display: none;
             position: absolute;
-            background-color: #003366; /* Deep Blue */
-            padding: 0;
-            margin: 0;
+            top: 40px;
+            left: 0;
+            background-color: white;
+            color: black;
             min-width: 200px;
-            z-index: 1000;
-            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul li:hover ul {
-            display: block;
-        }
-
-        nav ul li ul li a {
-            padding: 10px;
-            color: white;
-        }
-
-        nav ul li ul li a:hover {
-            background-color: #004080;
-        }
-
-        /* Section and Content */
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .general-info {
-            text-align: center;
-            padding: 50px 20px;
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
             color: #003366;
         }
 
-        .general-info h1 {
-            font-size: 2.5em;
-            color: #00509e;
+        .dropdown a:hover {
+            background-color: #f0f0f0;
         }
 
-        .general-info p {
-            font-size: 1.2em;
-            color: #333;
+        .nav-item:hover .dropdown {
+            display: block;
         }
 
-        section {
-            margin-bottom: 30px;
-        }
-
-        section h2 {
-            color: #002a5c;
-            font-size: 1.8em;
-            border-bottom: 2px solid #00509e;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-
-        section p {
-            line-height: 1.6;
+        main {
+            margin-top: 80px;
+            padding: 20px;
+            background-color: #ffffff;
+            max-width: 1200px;
+            margin: 80px auto 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
         }
 
         footer {
-            background-color: #002a5c;
+            background-color: #003366;
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 0;
-        }
-
-        /* Button Styling */
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #00509e;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #004080;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <div class="logo-container">
-        <!-- Logo and Icon -->
-        <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
-        <span class="site-title">CFAAS</span>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li>
-                <a href="#about-us">About Us</a>
-                <ul>
-                    <li><a href="#team">Our Team</a></li>
-                    <li><a href="#history">Our History</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#services">Services</a>
-                <ul>
-                    <li><a href="#audit">Audit</a></li>
-                    <li><a href="#consulting">Consulting</a></li>
-                </ul>
-            </li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-</header>
-
-<div class="container">
-    <div id="home" class="general-info">
+    <header>
+        <div class="logo-container">
+            <!-- Icon -->
+            <img class="logo-icon" src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/logo.jpg?raw=true" alt="CFAAS Logo">
+            </div>
+        </div>
+        <nav>
+            <div class="nav-item">
+                <a href="#">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">About Us</a>
+                <div class="dropdown">
+                    <a href="#">Who We Are</a>
+                    <p style="padding: 10px; margin: 0;">We are a dedicated firm providing tailored financial services with expertise in accounting, auditing, and advisory.</p>
+                    <a href="#">Our Mission</a>
+                    <p style="padding: 10px; margin: 0;">To empower businesses with professional financial solutions and help them achieve their goals.</p>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Services</a>
+                <div class="dropdown">
+                    <a href="#">Audit & Assurance</a>
+                    <p style="padding: 10px; margin: 0;">Providing transparent and compliant audit reports for your business needs.</p>
+                    <a href="#">Accounting</a>
+                    <p style="padding: 10px; margin: 0;">Accurate bookkeeping and financial records management for effective decision-making.</p>
+                    <a href="#">Advisory & Compliance</a>
+                    <p style="padding: 10px; margin: 0;">Strategic advice and compliance management to meet regulatory standards.</p>
+                    <a href="#">Outsourcing & Back Office</a>
+                    <p style="padding: 10px; margin: 0;">End-to-end back-office solutions, including payroll and tax management.</p>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Resources</a>
+                <div class="dropdown">
+                    <a href="#">Blogs</a>
+                    <p style="padding: 10px; margin: 0;">Stay updated with our latest insights and professional tips on financial management.</p>
+                    <a href="#">Latest Info</a>
+                    <p style="padding: 10px; margin: 0;">Breaking updates on regulations and market trends in finance.</p>
+                    <a href="#">Sample Templates</a>
+                    <p style="padding: 10px; margin: 0;">Download practical financial templates to simplify your workflows.</p>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Contact Us</a>
+                <p style="padding: 10px; margin: 0;">Reach out for inquiries, consultations, or support with your financial needs.</p>
+            </div>
+        </nav>
+    </header>
+    <main>
         <h1>Welcome to CFAAS</h1>
-        <p>Your trusted partner for financial accounting and advisory services.</p>
-        <p>Explore our expertise in audit, consulting, and compliance.</p>
-    </div>
-
-    <section id="about-us">
-        <h2>About Us</h2>
-        <p>At CFAAS, we pride ourselves on providing bespoke financial solutions to individuals and businesses. Our team of experts is committed to delivering excellence and building lasting relationships.</p>
-    </section>
-
-    <section id="services">
-        <h2>Our Services</h2>
-        <p>We offer a wide range of financial services including audit, accounting, tax consultancy, and business advisory to help you achieve your goals efficiently and effectively.</p>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any queries or would like to discuss your financial needs, feel free to reach out. We're here to help!</p>
-    </section>
-</div>
-
-<footer>
-    <p>&copy; 2025 CFAAS - All Rights Reserved.</p>
-</footer>
-
+        <p>Chartered Financial Accounting and Advisory Services (CFAAS) is committed to providing exceptional financial solutions tailored to your business needs. Explore our services to find the right solution for your business.</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
