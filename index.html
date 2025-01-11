@@ -11,9 +11,6 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         header {
@@ -77,7 +74,6 @@
             min-width: 200px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-            z-index: 100;
         }
 
         .dropdown a {
@@ -103,7 +99,6 @@
             margin: 80px auto 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            flex-grow: 1;
         }
 
         footer {
@@ -111,72 +106,53 @@
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: auto;
-        }
-
-        h2 {
             margin-top: 20px;
-            color: #003366;
-        }
-
-        p {
-            line-height: 1.6;
-            color: #555;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <!-- Icon -->
             <img class="logo-icon" src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
-            <!-- Logo -->
             <div class="logo">
                 <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/logo.jpg?raw=true" alt="CFAAS Logo">
             </div>
         </div>
         <nav>
             <div class="nav-item">
-                <a href="#">Home</a>
+                <a href="index.html">Home</a>
             </div>
             <div class="nav-item">
                 <a href="#">About Us</a>
                 <div class="dropdown">
-                    <a href="#">Who We Are</a>
-                    <p style="padding: 10px; margin: 0;">We are a dedicated firm providing tailored financial services with expertise in accounting, auditing, and advisory.</p>
-                    <a href="#">Our Mission</a>
-                    <p style="padding: 10px; margin: 0;">To empower businesses with professional financial solutions and help them achieve their goals.</p>
+                    <a href="about_overview.html">Overview</a>
+                    <a href="about_leadership.html">Leadership</a>
                 </div>
             </div>
             <div class="nav-item">
                 <a href="#">Services</a>
                 <div class="dropdown">
-                    <a href="#">Audit & Assurance</a>
-                    <p style="padding: 10px; margin: 0;">Providing transparent and compliant audit reports for your business needs.</p>
-                    <a href="#">Accounting</a>
-                    <p style="padding: 10px; margin: 0;">Accurate bookkeeping and financial records management for effective decision-making.</p>
-                    <a href="#">Advisory & Compliance</a>
-                    <p style="padding: 10px; margin: 0;">Strategic advice and compliance management to meet regulatory standards.</p>
-                    <a href="#">Outsourcing & Back Office</a>
-                    <p style="padding: 10px; margin: 0;">End-to-end back-office solutions, including payroll and tax management.</p>
+                    <a href="services_audit_assurance.html">Audit & Assurance</a>
+                    <a href="services_accounting.html">Accounting</a>
+                    <a href="services_advisory.html">Advisory & Compliance</a>
+                    <a href="services_outsourcing.html">Outsourcing & Back Office</a>
                 </div>
             </div>
             <div class="nav-item">
                 <a href="#">Resources</a>
                 <div class="dropdown">
-                    <a href="#">Blogs</a>
-                    <p style="padding: 10px; margin: 0;">Stay updated with our latest insights and professional tips on financial management.</p>
-                    <a href="#">Latest Info</a>
-                    <p style="padding: 10px; margin: 0;">Breaking updates on regulations and market trends in finance.</p>
-                    <a href="#">Sample Templates</a>
-                    <p style="padding: 10px; margin: 0;">Download practical financial templates to simplify your workflows.</p>
+                    <a href="resources_blogs.html">Blogs</a>
+                    <a href="resources_info.html">Latest Info</a>
+                    <a href="resources_templates.html">Sample Templates</a>
                 </div>
             </div>
             <div class="nav-item">
-                <a href="#">Contact Us</a>
+                <a href="contact.html">Contact Us</a>
             </div>
         </nav>
     </header>
+
+    <!-- Home Page Section -->
     <main>
         <h1>Welcome to CFAAS</h1>
         <p>Chartered Financial Accounting and Advisory Services (CFAAS) is committed to providing exceptional financial solutions tailored to your business needs. Explore our services to find the right solution for your business.</p>
@@ -187,6 +163,7 @@
         <p>Our aim is to understand and to add value to your business affairs whilst building a durable relationship with you, based on trust and mutual respect.</p>
         <p>We pride ourselves on the personal level of service we offer to our clients that delivers exceptional results. We have a proactive and forward-thinking team, made up of members who are all prepared to go the extra mile to ensure their clients are fully satisfied.</p>
     </main>
+
     <footer>
         <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
     </footer>
