@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
-    <!-- Corrected icon URL with ?raw=true -->
     <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
+        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -21,22 +21,61 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
         .logo {
             flex-grow: 1;
             text-align: center;
         }
         .logo img {
-            width: 320px; /* Increased logo size to 200px */
+            width: 300px;
             height: auto;
         }
-        .logo-icon {
-            width: 100px; /* Increased icon size to 60px */
-            height: auto;
-            margin-right: 15px;
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            position: relative;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #00509e;
+        }
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #00509e;
+            padding: 0;
+            margin: 0;
+            min-width: 200px;
+            z-index: 1000;
+        }
+        nav ul li:hover ul {
+            display: block;
+        }
+        nav ul li ul li a {
+            padding: 10px;
+            color: white;
+        }
+        nav ul li ul li a:hover {
+            background-color: #0073e6;
         }
         .container {
-            max-width: 1500px;
+            max-width: 1200px;
             margin: auto;
             padding: 20px;
         }
@@ -44,127 +83,126 @@
             background-color: #003366;
             color: white;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
+            padding: 15px 0;
+            position: relative;
             bottom: 0;
+            width: 100%;
         }
         footer p {
             margin: 0;
         }
-        .nav-buttons {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .nav-buttons button {
-            margin: 0 10px;
-            padding: 10px;
-            background-color: #003366;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .nav-buttons button:hover {
-            background-color: #00509e;
-        }
         section {
-            display: none; /* Initially hide all sections */
             margin-top: 20px;
             padding: 20px;
             background-color: #ffffff;
             border-radius: 5px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        #intro {
-            display: block; /* By default, show the Intro section */
-        }
-        .service-item {
-            margin-bottom: 15px;
-            padding: 10px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        .service-item:last-child {
-            border: none;
-        }
     </style>
 </head>
 <body>
 
 <header>
-    <!-- Corrected logo icon source with ?raw=true -->
-    <img class="logo-icon" src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" alt="Icon">
     <div class="logo">
         <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/logo.jpg?raw=true" alt="CFAAS Logo">
     </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li>
+                <a href="#about-us">About Us</a>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#services">Services</a>
+                <ul>
+                    <li><a href="#audit-assurance">Audit & Assurance</a></li>
+                    <li><a href="#accounting">Accounting</a></li>
+                    <li><a href="#advisory">Advisory & Compliance</a></li>
+                    <li><a href="#outsourcing">Outsourcing & Back Office Support</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#resources">Resources</a>
+                <ul>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#latest-info">Latest Info</a></li>
+                    <li><a href="#templates">Sample Template Forms</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
 </header>
 
 <div class="container">
-    <!-- Navigation Buttons -->
-    <div class="nav-buttons">
-        <button onclick="showSection('intro')">Introduction</button>
-        <button onclick="showSection('services')">Services</button>
-        <button onclick="showSection('contact')">Contact</button>
-    </div>
-
-    <!-- Introduction Section -->
-    <section id="intro">
-        <h2>Introduction</h2>
-        <p>Welcome to CFAAS, where we provide specialized financial accounting and advisory services tailored to meet the unique needs of your business.</p>
+    <section id="home">
+        <h1>Welcome to CFAAS</h1>
+        <p>Your trusted partner in financial accounting and advisory services.</p>
     </section>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <h2>Our Services</h2>
-        <div class="service-item">
-            <h3>Bookkeeping</h3>
-            <p>Efficient and accurate bookkeeping services to keep your financial records in top shape.</p>
+    <section id="about-us">
+        <h2>About Us</h2>
+        <div id="overview">
+            <h3>Overview</h3>
+            <p>We specialize in delivering bespoke financial solutions for businesses of all sizes.</p>
         </div>
-        <div class="service-item">
-            <h3>Financial Statements</h3>
-            <p>Comprehensive financial statements tailored to reflect the true value of your business.</p>
-        </div>
-        <div class="service-item">
-            <h3>Feasibility Studies</h3>
-            <p>Conducting thorough feasibility studies to guide your business decisions with confidence.</p>
-        </div>
-        <div class="service-item">
-            <h3>Financial Projections</h3>
-            <p>Projecting financial outcomes to prepare your business for the future.</p>
-        </div>
-        <div class="service-item">
-            <h3>Due Diligence</h3>
-            <p>Comprehensive due diligence to assess potential investments and opportunities.</p>
-        </div>
-        <div class="service-item">
-            <h3>Business Process Reengineering (BPR)</h3>
-            <p>Optimizing your business processes for increased efficiency and growth.</p>
+        <div id="leadership">
+            <h3>Leadership</h3>
+            <p>Meet our experienced team leading CFAAS to excellence.</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section id="services">
+        <h2>Services</h2>
+        <div id="audit-assurance">
+            <h3>Audit & Assurance</h3>
+            <p>Comprehensive auditing services tailored to your needs.</p>
+        </div>
+        <div id="accounting">
+            <h3>Accounting</h3>
+            <p>Accurate and timely accounting services to streamline your operations.</p>
+        </div>
+        <div id="advisory">
+            <h3>Advisory & Compliance</h3>
+            <p>Expert advice and compliance solutions to support your business goals.</p>
+        </div>
+        <div id="outsourcing">
+            <h3>Outsourcing & Back Office Support</h3>
+            <p>Efficient back-office solutions to enhance your business performance.</p>
+        </div>
+    </section>
+
+    <section id="resources">
+        <h2>Resources</h2>
+        <div id="blogs">
+            <h3>Blogs</h3>
+            <p>Read our latest insights on finance and business trends.</p>
+        </div>
+        <div id="latest-info">
+            <h3>Latest Info</h3>
+            <p>Stay updated with the latest in finance and business.</p>
+        </div>
+        <div id="templates">
+            <h3>Sample Template Forms</h3>
+            <p>Access useful templates to streamline your operations.</p>
+        </div>
+    </section>
+
+    <section id="contact">
         <h2>Contact Us</h2>
-        <p>We would love to hear from you. Whether you’re looking for accounting support or financial advice, our team is here to assist. Reach out through the following:</p>
         <p><strong>Email:</strong> <a href="mailto:shehiryar@cfaas.online">shehiryar@cfaas.online</a></p>
         <p><strong>Phone:</strong> +92 3405012432</p>
-        <p><strong>Address:</strong> Sector A Behria Enclave, near Shaheen Chemist, floor no 3, Islamabad, Pakistan</p>
+        <p><strong>Address:</strong> Sector A Behria Enclave, Islamabad, Pakistan</p>
     </section>
 </div>
 
 <footer>
-    <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+    <p>&copy; 2025 CFAAS - All Rights Reserved.</p>
 </footer>
-
-<script>
-    function showSection(sectionId) {
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            section.style.display = 'none'; // Hide all sections
-        });
-        document.getElementById(sectionId).style.display = 'block'; // Show the selected section
-    }
-</script>
 
 </body>
 </html>
