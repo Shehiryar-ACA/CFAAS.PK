@@ -10,11 +10,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
         }
 
         header {
-            background-color: #003366;
+            background-color: rgba(0, 0, 0, 0.8);
             color: white;
             display: flex;
             justify-content: space-between;
@@ -92,13 +91,21 @@
         }
 
         main {
-            margin-top: 80px;
+            background-image: url("https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/homepage-theme.jpg.jpg");
+            background-size: cover;
+            background-position: center;
+            height: calc(100vh - 60px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
             padding: 20px;
-            background-color: #ffffff;
-            max-width: 1200px;
-            margin: 80px auto 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+        }
+
+        main h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
         }
 
         footer {
@@ -106,7 +113,9 @@
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
@@ -154,14 +163,10 @@
 
     <!-- Home Page Section -->
     <main>
-        <h1>Welcome to CFAAS</h1>
-        <p>Chartered Financial Accounting and Advisory Services (CFAAS) is committed to providing exceptional financial solutions tailored to your business needs. Explore our services to find the right solution for your business.</p>
-        <h2>Who We Are</h2>
-        <p>We are a firm of chartered accountants offering complete audit fieldwork, accountancy, and financial consultancy solutions to a wide range of businesses and individuals.</p>
-        <p>We have a dedicated team of partners and staff providing trusted advice to clients across the Globe and from our offices in Islamabad and Peshawar. Our partners possess a combined experience of over 20 years gained from some of the country’s top accounting firms.</p>
-        <p>CFAAS Accountants was established in 2020 and continues to build on its trusted reputation for providing specialist and results-driven advice and service to small, medium-sized, and large businesses. We have significant expertise in providing consultancy and accounting services to large, listed businesses.</p>
-        <p>Our aim is to understand and to add value to your business affairs whilst building a durable relationship with you, based on trust and mutual respect.</p>
-        <p>We pride ourselves on the personal level of service we offer to our clients that delivers exceptional results. We have a proactive and forward-thinking team, made up of members who are all prepared to go the extra mile to ensure their clients are fully satisfied.</p>
+        <div>
+            <h1>Welcome to CFAAS</h1>
+            <p>Your trusted partner for accounting and financial advisory solutions.</p>
+        </div>
     </main>
 
     <footer>
