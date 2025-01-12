@@ -23,6 +23,8 @@
             background-attachment: fixed; /* Keep the background fixed while scrolling */
             color: white; /* White font color for text */
             flex: 1 0 auto; /* Allow content to grow while footer sticks at the bottom */
+            text-align: center; /* Center-align the text */
+            padding: 0 20px; /* Add padding for better text spacing */
         }
 
         /* Header section */
@@ -107,12 +109,8 @@
         /* Main content styling */
         main {
             margin-top: 80px; /* Space to accommodate the fixed header */
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for readability */
-            max-width: 1200px;
-            margin: 80px auto 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            padding: 50px 20px;
+            z-index: 100;
         }
 
         h1, h2 {
@@ -121,12 +119,14 @@
 
         p {
             color: white; /* White font color for paragraphs */
+            font-size: 18px; /* Adjust font size for better readability */
+            line-height: 1.6;
         }
 
         /* Footer styling */
         footer {
-            background-color: white; /* Set footer background color to white */
-            color: black; /* Set footer text color to black */
+            background-color: grey; /* Set footer background color to grey */
+            color: white; /* Set footer text color to white */
             text-align: center;
             padding: 15px 0;
             margin-top: auto; /* Ensures footer stays at the bottom */
