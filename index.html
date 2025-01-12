@@ -6,6 +6,13 @@
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
     <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         /* Apply flexbox layout to body for sticky footer */
         html, body {
             height: 100%;
@@ -34,10 +41,10 @@
             color: white;
             display: flex;
             justify-content: space-between;
-            align-items: left;
+            align-items: center;
             padding: 15px 20px;
             position: fixed;
-            width: 100%;
+            width: 100vw;
             top: 0;
             z-index: 1000;
         }
@@ -126,7 +133,7 @@
             line-height: 1.5;
             max-width: 900px; /* Max width for better alignment */
             text-align: left; /* Explicit left alignment */
-            margin: 0 auto;
+            margin: 10px 0; /* Remove auto margins */
         }
 
         /* Footer styling */
@@ -134,7 +141,8 @@
             background-color: darkgrey; /* Changed footer background color to dark grey */
             color: white; /* Set footer text color to white */
             text-align: left; /* Align footer text to left */
-            padding: 20px 0;
+            padding: 20px;
+            width: 100vw; /* Ensure footer spans full width */
             margin-top: auto; /* Ensures footer stays at the bottom */
         }
     </style>
