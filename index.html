@@ -34,15 +34,17 @@
 
         /* Header section */
         header {
-           background-color: #003366;
+            background-color: #003366;
             color: white;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 20px;
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            right: 0;
+            width: 100%; /* Ensure full width */
             z-index: 1000;
         }
 
@@ -235,9 +237,13 @@
         footer {
             background-color: #003366;
             color: white;
-            text-align: center;
+            text-align: center; /* Center the text */
             padding: 15px 0;
             margin-top: 20px;
+            width: 100%; /* Ensure full width */
+            position: relative; /* To allow for full width */
+            left: 0;
+            right: 0;
         }
     </style>
 </head>
@@ -287,10 +293,10 @@
         <!-- Hero Section -->
         <section class="hero">
             <h1>Welcome to CFAAS - Financial Accounting and Auditing Firm</h1>
-            <p>Precise Auditing & Accountancy Services</p>
-            <p>Experienced and Expert Accountants</p>
-            <p>Commitment to Your Success</p>
-            <p>Growth-Focused</p>
+            <p><span class="tick">&#10003;</span>Precise Auditing & Accountancy Services</p>
+            <p><span class="tick">&#10003;</span>Experienced and Expert Accountants</p>
+            <p><span class="tick">&#10003;</span>Commitment to Your Success</p>
+            <p><span class="tick">&#10003;</span>Growth-Focused</p>
             <button onclick="window.location.href='contact.html'">Contact Us</button>
         </section>
 
@@ -313,27 +319,27 @@
             <p>Find more about our services below</p>
             <div class="service-boxes">
                 <div class="service-box" onclick="window.location.href='services_audit_assurance.html'">
-                    <h3>Auditing & Assurance</h3>
-                    <p>Professional audits ensuring compliance and accuracy.</p>
+                    <h3>Audit & Assurance</h3>
+                    <p>Comprehensive auditing services</p>
                 </div>
                 <div class="service-box" onclick="window.location.href='services_accounting.html'">
-                    <h3>Financial Accounting</h3>
-                    <p>Expert financial reporting and analysis for your business.</p>
+                    <h3>Accounting</h3>
+                    <p>Accounting for business & personal finances</p>
                 </div>
                 <div class="service-box" onclick="window.location.href='services_advisory.html'">
                     <h3>Advisory & Compliance</h3>
-                    <p>Guidance on regulatory compliance and strategic growth.</p>
+                    <p>Regulatory advisory and tax compliance</p>
                 </div>
                 <div class="service-box" onclick="window.location.href='services_outsourcing.html'">
-                    <h3>Outsourcing & Back Office</h3>
-                    <p>Efficient outsourcing for business processes and support.</p>
+                    <h3>Outsourcing</h3>
+                    <p>Dedicated outsourcing solutions for back-office functions</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+        <p>&copy; 2025 CFAAS. All rights reserved.</p>
     </footer>
 </body>
 </html>
