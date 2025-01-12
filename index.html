@@ -25,19 +25,16 @@
         /* General body styling with background image */
         body {
             font-family: Arial, sans-serif;
-            background: url('https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/homepage-theme.jpg?raw=true') no-repeat center center fixed;
-            background-size: cover; /* Ensure the image covers the entire page */
-            background-attachment: fixed; /* Keep the background fixed while scrolling */
-            color: white; /* Changed body text color to white */
-            font-weight: bold; /* Made body text bold */
-            flex: 1 0 auto; /* Allow content to grow while footer sticks at the bottom */
-            text-align: left; /* Left align for text */
-            padding: 0 20px; /* Add padding for better text spacing */
+            background-color: #f4f4f4;
+            color: black;
+            flex: 1 0 auto;
+            text-align: left;
+            padding: 0 20px;
         }
 
         /* Header section */
         header {
-            background-color: #1a1a1a; /* Updated header color to a darker gray */
+            background-color: #1a1a1a;
             color: white;
             display: flex;
             justify-content: space-between;
@@ -83,7 +80,7 @@
         }
 
         .nav-item > a:hover {
-            background-color: #555; /* Slightly lighter for hover effect */
+            background-color: #555;
             border-radius: 5px;
         }
 
@@ -116,34 +113,131 @@
 
         /* Main content styling */
         main {
-            margin-top: 80px; /* Space to accommodate the fixed header */
+            margin-top: 80px;
             padding: 50px 20px;
-            z-index: 100;
         }
 
         h1, h2 {
-            color: white; /* Keep headings white for consistency */
-            font-size: 40px; /* Increased font size for better readability */
-            font-weight: bold; /* Make headings bold */
+            color: black;
+            font-size: 40px;
+            font-weight: bold;
         }
 
         p {
-            color: white; /* Changed paragraph text to white */
-            font-size: 20px; /* Increased font size for better readability */
+            color: black;
+            font-size: 20px;
             line-height: 1.5;
-            max-width: 900px; /* Max width for better alignment */
-            text-align: left; /* Explicit left alignment */
-            margin: 10px 0; /* Remove auto margins */
+            max-width: 900px;
+            text-align: left;
+            margin: 10px 0;
         }
 
-        /* Footer styling */
+        /* Hero image section */
+        .hero {
+            position: relative;
+            background: url('https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/homepage-theme.jpg?raw=true') no-repeat center center fixed;
+            background-size: cover;
+            padding: 150px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #f37c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #d66e00;
+        }
+
+        /* About us section */
+        .about {
+            display: flex;
+            background-color: #d3d3d3;
+            padding: 50px 20px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        /* Our Services section */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #d3d3d3;
+        }
+
+        .services h2 {
+            font-size: 35px;
+            font-weight: bold;
+            color: #f37c00;
+        }
+
+        .services p {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .service-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            cursor: pointer;
+        }
+
+        .service-box h3 {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer */
         footer {
-            background-color: darkgrey; /* Changed footer background color to dark grey */
-            color: white; /* Set footer text color to white */
-            text-align: left; /* Align footer text to left */
+            background-color: darkgrey;
+            color: white;
+            text-align: left;
             padding: 20px;
-            width: 100vw; /* Ensure footer spans full width */
-            margin-top: auto; /* Ensures footer stays at the bottom */
+            width: 100vw;
+            margin-top: auto;
         }
     </style>
 </head>
@@ -190,14 +284,52 @@
     </header>
 
     <main>
-        <h1>Welcome to CFAAS</h1>
-        <p>Chartered Financial Accounting and Advisory Services (CFAAS) is committed to providing exceptional financial solutions tailored to your business needs. Explore our services to find the right solution for your business.</p>
-        <h2>Who We Are</h2>
-        <p>We are a firm of chartered accountants offering complete audit fieldwork, accountancy, and financial consultancy solutions to a wide range of businesses and individuals.</p>
-        <p>We have a dedicated team of partners and staff providing trusted advice to clients across the Globe and from our offices in Islamabad and Peshawar. Our partners possess a combined experience of over 20 years gained from some of the country’s top accounting firms.</p>
-        <p>CFAAS Accountants was established in 2020 and continues to build on its trusted reputation for providing specialist and results-driven advice and service to small, medium-sized, and large businesses. We have significant expertise in providing consultancy and accounting services to large, listed businesses.</p>
-        <p>Our aim is to understand and to add value to your business affairs whilst building a durable relationship with you, based on trust and mutual respect.</p>
-        <p>We pride ourselves on the personal level of service we offer to our clients that delivers exceptional results. We have a proactive and forward-thinking team, made up of members who are all prepared to go the extra mile to ensure their clients are fully satisfied.</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to CFAAS - Financial Accounting and Auditing Firm</h1>
+            <p>Precise Auditing & Accountancy Services</p>
+            <p>Experienced and Expert Accountants</p>
+            <p>Commitment to Your Success</p>
+            <p>Growth-Focused</p>
+            <button onclick="window.location.href='contact.html'">Contact Us</button>
+        </section>
+
+        <!-- Who We Are Section -->
+        <section class="about">
+            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/homepage-theme%202.JPG?raw=true" alt="Who We Are Image">
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>We are a firm of chartered accountants offering complete audit fieldwork, accountancy, and financial consultancy solutions to a wide range of businesses and individuals.</p>
+                <p>We have a dedicated team of partners and staff providing trusted advice to clients across the Globe and from our offices in Islamabad and Peshawar. Our partners possess a combined experience of over 20 years gained from some of the country’s top accounting firms.</p>
+                <p>CFAAS Accountants was established in 2020 and continues to build on its trusted reputation for providing specialist and results-driven advice and service to small, medium-sized, and large businesses. We have significant expertise in providing consultancy and accounting services to large, listed businesses.</p>
+                <p>Our aim is to understand and to add value to your business affairs whilst building a durable relationship with you, based on trust and mutual respect.</p>
+                <p>We pride ourselves on the personal level of service we offer to our clients that delivers exceptional results. We have a proactive and forward-thinking team, made up of members who are all prepared to go the extra mile to ensure their clients are fully satisfied.</p>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <p>Find more about our services below</p>
+            <div class="service-boxes">
+                <div class="service-box" onclick="window.location.href='services_audit_assurance.html'">
+                    <h3>Auditing & Assurance</h3>
+                    <p>Professional audits ensuring compliance and accuracy.</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_accounting.html'">
+                    <h3>Financial Accounting</h3>
+                    <p>Expert financial reporting and analysis for your business.</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_advisory.html'">
+                    <h3>Advisory & Compliance</h3>
+                    <p>Guidance on regulatory compliance and strategic growth.</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_outsourcing.html'">
+                    <h3>Outsourcing & Back Office</h3>
+                    <p>Efficient outsourcing for business processes and support.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
