@@ -235,15 +235,16 @@
 
         /* Footer */
         footer {
-            background-color: #003366;
-            color: white;
-            text-align: center; /* Center the text */
-            padding: 15px 0;
-            margin-top: 20px;
-            width: 100%; /* Ensure full width */
-            position: relative; /* To allow for full width */
-            left: 0;
-            right: 0;
+           background-color: #003366;
+           color: white;
+           text-align: center; /* Center the text */
+           padding: 15px 0;
+           margin-top: 20px;
+           width: 100%; /* Ensure full width */
+           position: absolute; /* This ensures the footer is always at the bottom */
+           bottom: 0; /* This places the footer at the bottom of the page */
+           left: 0; /* This makes sure the footer stretches from the left edge */
+           right: 0; /* This ensures it stretches to the right edge */
         }
     </style>
 </head>
