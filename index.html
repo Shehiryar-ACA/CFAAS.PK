@@ -115,7 +115,7 @@
 
         /* Main content styling */
         main {
-            margin-top: 80px;
+            margin-top: 80px; /* Adjusted for fixed header */
             padding: 50px 20px;
         }
 
@@ -235,12 +235,15 @@
 
         /* Footer */
         footer {
-           background-color: #003366;
-           color: white;
-           text-align: center; /* Center the text */
-           padding: 15px 0;
-           margin-top: auto; /* This ensures the footer moves to the bottom */
-           width: 100%; /* Ensure full width */
+            background-color: #003366;
+            color: white;
+            display: flex;              /* Use flexbox */
+            justify-content: center;    /* Center content horizontally */
+            align-items: center;        /* Center content vertically */
+            padding: 15px 0;
+            margin-top: auto;
+            width: 100%;                /* Ensure full width */
+            font-size: 14px;            /* Adjust font size */
         }
     </style>
 </head>
@@ -321,22 +324,22 @@
                 </div>
                 <div class="service-box" onclick="window.location.href='services_accounting.html'">
                     <h3>Accounting</h3>
-                    <p>Accounting for business & personal finances</p>
+                    <p>Efficient accounting services for your business</p>
                 </div>
                 <div class="service-box" onclick="window.location.href='services_advisory.html'">
                     <h3>Advisory & Compliance</h3>
-                    <p>Regulatory advisory and tax compliance</p>
+                    <p>Expert advisory and compliance support</p>
                 </div>
                 <div class="service-box" onclick="window.location.href='services_outsourcing.html'">
-                    <h3>Outsourcing</h3>
-                    <p>Dedicated outsourcing solutions for back-office functions</p>
+                    <h3>Outsourcing & Back Office</h3>
+                    <p>Optimized back-office solutions</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2020 CFAAS - Chartered Financial Accounting & Advisory Services. All Rights Reserved.</p>
+        <p>&copy; 2025 CFAAS. All rights reserved.</p>
     </footer>
 </body>
 </html>
