@@ -6,14 +6,23 @@
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
     <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
+        /* Apply flexbox layout to body for sticky footer */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
         /* General body styling with background image */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background: url('https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/homepage-theme.jpg?raw=true') no-repeat center center fixed;
-            background-size: cover;
-            color: #333; /* Adjust text color for readability */
+            background-size: cover; /* Ensure the image covers the entire page */
+            background-attachment: fixed; /* Keep the background fixed while scrolling */
+            color: white; /* White font color for text */
+            flex: 1 0 auto; /* Allow content to grow while footer sticks at the bottom */
         }
 
         /* Header section */
@@ -97,9 +106,9 @@
 
         /* Main content styling */
         main {
-            margin-top: 80px;
+            margin-top: 80px; /* Space to accommodate the fixed header */
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for content background */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for readability */
             max-width: 1200px;
             margin: 80px auto 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -107,16 +116,20 @@
         }
 
         h1, h2 {
-            color: #003366;
+            color: white; /* White font color for headings */
+        }
+
+        p {
+            color: white; /* White font color for paragraphs */
         }
 
         /* Footer styling */
         footer {
-            background-color: black; /* Set footer background color to black */
-            color: white;
+            background-color: white; /* Set footer background color to white */
+            color: black; /* Set footer text color to black */
             text-align: center;
             padding: 15px 0;
-            margin-top: 20px;
+            margin-top: auto; /* Ensures footer stays at the bottom */
         }
     </style>
 </head>
