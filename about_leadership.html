@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
+    <link rel="icon" href="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        html, body {
             margin: 0;
             padding: 0;
+            height: 100%;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -47,58 +54,127 @@
         }
 
         .nav-item {
-            position: relative;
             margin: 0 20px;
-            cursor: pointer;
         }
 
-        .nav-item > a {
+        .nav-item a {
             color: white;
             text-decoration: none;
             padding: 10px 15px;
             display: inline-block;
         }
 
-        .nav-item > a:hover {
+        .nav-item a:hover {
             background-color: #00509e;
             border-radius: 5px;
-        }
-
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 40px;
-            left: 0;
-            background-color: white;
-            color: black;
-            min-width: 200px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #003366;
-        }
-
-        .dropdown a:hover {
-            background-color: #f0f0f0;
-        }
-
-        .nav-item:hover .dropdown {
-            display: block;
         }
 
         main {
             margin-top: 80px;
             padding: 20px;
-            background-color: #ffffff;
             max-width: 1200px;
-            margin: 80px auto 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 80px auto;
+            flex: 1;
+        }
+
+        .overview {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .overview img {
+            width: 100%;
             border-radius: 10px;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .overview-text {
+            width: 48%;
+            padding: 20px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .overview-text h1 {
+            color: orange;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .overview-text p {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .contact-button:hover {
+            background-color: darkorange;
+        }
+
+        .services {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .services h2 {
+            color: orange;
+            margin-bottom: 5px;
+        }
+
+        .services p {
+            margin-bottom: 20px;
+        }
+
+        .service-boxes {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service-box {
+            width: 23%;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-box h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            margin: 0;
         }
 
         footer {
@@ -106,119 +182,78 @@
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 20px;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img class="logo-icon" src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
+            <img class="logo-icon" src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Icon.ico?raw=true" alt="CFAAS Icon">
             <div class="logo">
-                <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/logo.jpg?raw=true" alt="CFAAS Logo">
+                <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/logo.jpg?raw=true" alt="CFAAS Logo">
             </div>
         </div>
         <nav>
-            <div class="nav-item">
-                <a href="index.html">Home</a>
-            </div>
-            <div class="nav-item">
-                <a href="#">About Us</a>
-                <div class="dropdown">
-                    <a href="about_overview.html">Overview</a>
-                    <a href="about_leadership.html">Leadership</a>
-                </div>
-            </div>
-            <div class="nav-item">
-                <a href="#">Services</a>
-                <div class="dropdown">
-                    <a href="services_audit_assurance.html">Audit & Assurance</a>
-                    <a href="services_accounting.html">Accounting</a>
-                    <a href="services_advisory.html">Advisory & Compliance</a>
-                    <a href="services_outsourcing.html">Outsourcing & Back Office</a>
-                </div>
-            </div>
-            <div class="nav-item">
-                <a href="#">Resources</a>
-                <div class="dropdown">
-                    <a href="resources_blogs.html">Blogs</a>
-                    <a href="resources_info.html">Latest Info</a>
-                    <a href="resources_templates.html">Sample Templates</a>
-                </div>
-            </div>
-            <div class="nav-item">
-                <a href="contact.html">Contact Us</a>
-            </div>
+            <div class="nav-item"><a href="index.html">Home</a></div>
+            <div class="nav-item"><a href="about_overview.html">About Us</a></div>
+            <div class="nav-item"><a href="services_audit_assurance.html">Services</a></div>
+            <div class="nav-item"><a href="contact.html">Contact Us</a></div>
         </nav>
     </header>
 
-    
     <main>
-        <h1>Leadership</h1>
-        <p>Our leadership team brings a wealth of experience and expertise in financial accounting and advisory services. With a focus on excellence and client success, our partners and leaders guide CFAAS with vision and integrity.</p>
-        <h2>Our Partners</h2>
-        <ul>
-            <li><strong>Shehiryar Khan</strong> - Managing Partner</li>
-        </ul>
+        <!-- Overview Section -->
+        <div class="overview">
+            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/leadership-theme.jpg?raw=true" alt="Overview of CFAAS services">
+            <div class="overview-text">
+                <h1>Overview</h1>
+                <p>Meet Our Leadership Team</p>
+                <p>At CFAAS, we pride ourselves on having a leadership team with extensive expertise in financial accounting, advisory services, and a relentless commitment to client success. Our partners and leaders, each an industry expert in their own right, work together to uphold the firm's values of excellence, integrity, and innovative solutions.</p>
+
+                <h2>Shehriyar Khan - Managing Partner (ACA)</h2>
+                <p>With a solid foundation in financial accounting and strategic leadership, Shehriyar Khan, a Chartered Accountant (ACA), serves as the Managing Partner at CFAAS. Shehriyar has years of diverse experience in audit, financial reporting, and advisory services. His commitment to providing tailored solutions for clients ensures that CFAAS delivers practical and insightful guidance across industries.</p>
+
+                <h2>Asad Ur Rehman - Partner (ACA)</h2>
+                <p>As a Partner at CFAAS, Asad Ur Rehman, also a Chartered Accountant (ACA), is a key figure in overseeing client relationships and ensuring the quality of service across the firm. With expertise in financial analysis, corporate governance, and risk management, Asad’s leadership strengthens CFAAS’s strategic direction and fosters long-term client success.</p>
+
+                <h2>Muhammad Rooh Ullah - Audit Manager (CA Finalist)</h2>
+                <p>Muhammad Rooh Ullah, a CA Finalist, serves as Audit Manager at CFAAS, specializing in financial audits, risk assessments, and compliance strategies. With a sharp focus on detail and a commitment to precision, Muhammad leads audit teams and manages complex client portfolios, ensuring that CFAAS provides high-quality audit services that meet industry standards.</p>
+
+                <h2>Muhammad Waseem - Account Manager (ACA, ICAEW)</h2>
+                <p>Muhammad Waseem, an ACA with the Institute of Chartered Accountants in England and Wales (ICAEW), brings deep expertise in financial reporting, taxation, and advisory services to his role as Account Manager. With a strong foundation in international accounting practices, Muhammad works closely with clients to deliver accurate, timely, and insightful financial solutions that align with their business objectives.</p>
+
+                <a href="contact.html" class="contact-button">Contact Us</a>
+            </div>
+        </div>
+
+        <!-- Our Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <p>Find more about our services below</p>
+            <div class="service-boxes">
+                <div class="service-box" onclick="window.location.href='services_audit_assurance.html'">
+                    <h3>Audit & Assurance</h3>
+                    <p>Comprehensive auditing services</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_accounting.html'">
+                    <h3>Accounting</h3>
+                    <p>Efficient accounting services for your business</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_advisory.html'">
+                    <h3>Advisory & Compliance</h3>
+                    <p>Expert advisory and compliance support</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_outsourcing.html'">
+                    <h3>Outsourcing & Back Office</h3>
+                    <p>Optimized back-office solutions</p>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <footer>
-        <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+        <p>Copyright 2025&copy; All rights reserved.</p>
     </footer>
 </body>
 </html>
