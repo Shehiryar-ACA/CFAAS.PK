@@ -68,7 +68,32 @@
             background-color: #00509e;
             border-radius: 5px;
         }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: white;
+            color: black;
+            min-width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
 
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
         main {
             margin-top: 80px;
             padding: 20px;
@@ -87,9 +112,13 @@
 
         .overview img {
             width: 100%;
-            height: 100%; /* Ensures the image height matches the text height */
             border-radius: 10px;
-            object-fit: cover; /* Ensures the image covers the area */
+            height: 100%; /* Adjusted to make the image match the text height */
+            object-fit: cover; /* Ensures the image maintains proper aspect ratio */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
         }
 
         .overview-text {
@@ -98,7 +127,6 @@
             border-radius: 10px;
             position: relative;
             z-index: 1;
-            background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a dark background to text area */
         }
 
         .overview-text h1 {
@@ -114,7 +142,8 @@
         }
 
         .overview-text h2 {
-            color: orange; /* Leader names will now appear in orange */
+            color: orange; /* Set leader names to orange */
+            font-weight: bold;
         }
 
         .contact-button {
@@ -197,10 +226,36 @@
             </div>
         </div>
         <nav>
-            <div class="nav-item"><a href="index.html">Home</a></div>
-            <div class="nav-item"><a href="about_overview.html">About Us</a></div>
-            <div class="nav-item"><a href="services_audit_assurance.html">Services</a></div>
-            <div class="nav-item"><a href="contact.html">Contact Us</a></div>
+            <div class="nav-item">
+                <a href="index.html">Home</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">About Us</a>
+                <div class="dropdown">
+                    <a href="about_overview.html">Overview</a>
+                    <a href="about_leadership.html">Leadership</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Services</a>
+                <div class="dropdown">
+                    <a href="services_audit_assurance.html">Audit & Assurance</a>
+                    <a href="services_accounting.html">Accounting</a>
+                    <a href="services_advisory.html">Advisory & Compliance</a>
+                    <a href="services_outsourcing.html">Outsourcing & Back Office</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Resources</a>
+                <div class="dropdown">
+                    <a href="resources_blogs.html">Blogs</a>
+                    <a href="resources_info.html">Latest Info</a>
+                    <a href="resources_templates.html">Sample Templates</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="contact.html">Contact Us</a>
+            </div>
         </nav>
     </header>
 
