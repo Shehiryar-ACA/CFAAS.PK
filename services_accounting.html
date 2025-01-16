@@ -108,6 +108,136 @@
             padding: 15px 0;
             margin-top: 20px;
         }
+
+        .audit-theme-container {
+            position: relative;
+            text-align: left;
+            color: white;
+        }
+
+        .audit-theme {
+            width: 100%;
+            height: auto;
+        }
+
+        .audit-theme-text {
+    position: absolute;
+    top: 30%;
+    left: 10px;
+    transform: translateX(0);
+}
+
+.audit-theme-text h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: orange; /* Header color changed to orange */
+}
+
+.audit-theme-text ul {
+    padding: 0;
+    list-style: none;
+}
+
+.audit-theme-text ul li {
+    font-size: 18px; /* Optional: Adjust as needed */
+    font-weight: bold;
+    color: white; /* List items remain white */
+}
+
+        .audit-theme-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 20%;
+            transform: translateX(-50%);
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .audit-theme-btn:hover {
+            background-color: #e07b00;
+        }
+
+        .audit-theme2-container {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .audit-theme2-img {
+            width: 50%;
+            height: 100%;
+        }
+
+        .audit-theme2-text {
+            width: 50%;
+            padding: 20px;
+            background-color: #f1f1f1;
+            color: grey;
+            border-radius: 10px;
+        }
+
+        .audit-theme2-header {
+            font-size: 25px;
+            color: orange;
+            font-weight: bold;
+        }
+
+        .audit-theme2-paragraph {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .audit-theme2-header2 {
+            font-size: 20px;
+            color: orange;
+            font-weight: bold;
+        }
+
+        .services-section {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .services-header {
+            color: orange;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .service-boxes {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .service-box {
+            width: 23%;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .service-box:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-box h3 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            margin: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -152,75 +282,102 @@
         </nav>
     </header>
 
-    
     <main>
-        <h1>Accounting Services</h1>
-        <p>Our accounting services are designed to meet the unique needs of each business, from startups to large corporations. We provide accurate and timely financial information to support business decisions.</p>
-        <ul>
-            <li>Bookkeeping</li>
-            <li>Financial Statement Preparation</li>
-            <li>Tax Compliance and Filing</li>
-            <li>Management Reporting</li>
-        </ul>
+        <!-- Audit Theme Section -->
+        <div class="audit-theme-container">
+            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Accounting-theme.jpg?raw=true" alt="Audit Theme" class="audit-theme">
+            <div class="audit-theme-text">
+                <h2>Expert Cloud Accounting Services</h2>
+                <ul>
+                    <li><span class="tick">&#10003;</span>Embrace Cloud Accounting and Ascend to Financial Heights with CFAAS</li>
+                    <li><span class="tick">&#10003;</span>cloud accountants offer exceptional cloud accounting services that you can take advantage of</li>
+                    <li><span class="tick">&#10003;</span>Our certified cloud accountants are dedicated to simplifying and optimizing your financial management processes.</li>
+                </ul>
+            </div>
+            <button class="audit-theme-btn" onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+
+        <!-- Audit Theme 2 Section -->
+        <div class="audit-theme2-container">
+            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Accounting-theme2.jpg?raw=true" alt="Audit Theme 2" class="audit-theme2-img">
+            <div class="audit-theme2-text">
+                <h2 class="audit-theme2-header">Welcome to CFAAS: Embracing the Future of Cloud Accounting!</h2>
+                <p class="audit-theme2-paragraph">
+    Experience the Benefits of Cloud Accounting with CFAAS:
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Access Anytime, Anywhere:</strong> View your business accounts and finances on any device, at any time.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Monitor with Ease:</strong> Track your cash flow and profits effortlessly.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Secure Records:</strong> Enjoy instant, secure access to your financial data.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Stay Organized:</strong> Never misplace an invoice or receipt again.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Seamless Sharing:</strong> Easily collaborate with your team or share records with us, your accountants.
+</p>
+<p class="audit-theme2-paragraph">
+    And that’s just the beginning!
+</p>
+<p class="audit-theme2-paragraph">
+    Our tailored packages are designed to meet your unique needs, many including automatic bank feeds for complete financial control. Gain a bird’s eye view of your income and expenses, freeing up valuable time to focus on growing the business you love.
+</p>
+<p class="audit-theme2-paragraph">
+    Ready to embrace the future of accounting? Whether you’re switching to cloud-based solutions or prefer the traditional approach, we’re here to help. Call us today at <strong>+92340-5012432</strong>!
+</p>
+
+                <h3 class="audit-theme2-header2">Why Choose Cloud Accounting Software</h3>
+<p class="audit-theme2-paragraph">
+    Cloud-based software is transforming financial accounting with its accessibility, convenience, and scalability—key factors driving its growing popularity among businesses of all sizes.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Key Features of Cloud-Based Accounting Software</strong>
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Remote Server Hosting:</strong> Operates on highly secure servers maintained by cloud providers, equipped with advanced security and redundancy measures to ensure uninterrupted service.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Anywhere, Anytime Access:</strong> Being web-based, you can access your accounts from anywhere in the world with an internet connection, providing unmatched flexibility.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Enhanced Security:</strong> Cloud services utilize industry-leading encryption and security protocols to safeguard your financial data.
+</p>
+<p class="audit-theme2-paragraph">
+    <strong>Scalability:</strong> Cloud software can scale with your business growth, providing additional features and storage as needed.
+</p>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services-section">
+            <h2 class="services-header">Our Services</h2>
+            <div class="service-boxes">
+                <div class="service-box">
+                    <h3>Audit & Assurance</h3>
+                    <p>Comprehensive audit and assurance services to ensure compliance and transparency.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Accounting</h3>
+                    <p>Expert accounting services to help you maintain accurate financial records.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Advisory</h3>
+                    <p>Strategic advice to help your business achieve its financial goals.</p>
+                </div>
+                <div class="service-box">
+                    <h3>Outsourcing</h3>
+                    <p>Efficient outsourcing solutions to reduce costs and improve productivity.</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <footer>
-        <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+        <p>&copy; 2025 CFAAS. All rights reserved.</p>
     </footer>
 </body>
 </html>
