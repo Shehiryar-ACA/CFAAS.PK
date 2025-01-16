@@ -11,7 +11,6 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         header {
@@ -96,12 +95,10 @@
             margin-top: 80px;
             padding: 20px;
             background-color: #ffffff;
-            width: 100%;
-            max-width: 100%;
+            max-width: 1200px;
+            margin: 80px auto 0;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            margin: 80px auto 0;
-            box-sizing: border-box; /* Prevent overflow */
         }
 
         footer {
@@ -116,14 +113,11 @@
             position: relative;
             text-align: left;
             color: white;
-            margin: 0;
-            padding: 0;
         }
 
         .audit-theme {
             width: 100%;
-            height: auto;
-            max-width: 100%; /* Ensure it doesn't exceed screen size */
+            height: auto; /* Adjusted to make the image responsive */
         }
 
         .audit-theme-text {
@@ -167,47 +161,43 @@
             background-color: #e07b00;
         }
 
-        .audit-theme2-container {
-            display: flex;
-            margin-top: 40px;
-            background-color: #dcdcdc;
-            padding: 40px 0;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+.audit-theme2-container {
+    display: flex;
+    margin-top: 40px;
+    background-color: #dcdcdc; /* Grey background for both image and text */
+    padding: 40px 0; /* Add some padding for spacing */
+}
 
-        .audit-theme2-img {
-            width: 100%;
-            max-width: 50%; /* Restrict width to half */
-            height: auto;
-        }
+.audit-theme2-img {
+    width: 50%;
+    height: 130%;
+}
 
-        .audit-theme2-text {
-            width: 100%;
-            max-width: 50%; /* Restrict width to half */
-            padding: 20px;
-            color: white;
-            border-radius: 10px;
-        }
+.audit-theme2-text {
+    width: 50%;
+    padding: 20px;
+    background-color: #dcdcdc; /* Grey background for the text box */
+    color: white; /* Change paragraph text color to white */
+    border-radius: 10px;
+}
 
-        .audit-theme2-header {
-            font-size: 30px;
-            color: orange;
-            font-weight: bold;
-        }
+.audit-theme2-header {
+    font-size: 30px;
+    color: orange; /* Header color remains orange */
+    font-weight: bold;
+}
 
-        .audit-theme2-paragraph {
-            font-size: 16px;
-            line-height: 1.6;
-            color: white;
-        }
+.audit-theme2-paragraph {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white; /* Ensures the text is white */
+}
 
-        .audit-theme2-header2 {
-            font-size: 30px;
-            color: orange;
-            font-weight: bold;
-        }
-
+.audit-theme2-header2 {
+    font-size: 30px;
+    color: orange;
+    font-weight: bold;
+}
         .services-section {
             margin-top: 50px;
             text-align: center;
@@ -365,18 +355,18 @@
                 </div>
                 <div class="service-box">
                     <h3>Advisory & Compliance</h3>
-                    <p>Advisory services for financial planning, tax, and compliance.</p>
+                    <p>Strategic advisory services to help your business navigate financial challenges.</p>
                 </div>
                 <div class="service-box">
                     <h3>Outsourcing</h3>
-                    <p>Efficient outsourcing for your back office needs.</p>
+                    <p>Outsource your back-office operations to focus on what matters most.</p>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 CFAAS - Chartered Financial Accounting and Advisory Services. All rights reserved.</p>
+        <p>&copy; 2025 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
