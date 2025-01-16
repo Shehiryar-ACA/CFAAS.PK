@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             background-color: #f5f5f5;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         header {
@@ -100,6 +101,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
             margin: 80px auto 0;
+            box-sizing: border-box; /* Prevent overflow */
         }
 
         footer {
@@ -121,6 +123,7 @@
         .audit-theme {
             width: 100%;
             height: auto;
+            max-width: 100%; /* Ensure it doesn't exceed screen size */
         }
 
         .audit-theme-text {
@@ -169,15 +172,19 @@
             margin-top: 40px;
             background-color: #dcdcdc;
             padding: 40px 0;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .audit-theme2-img {
-            width: 50%;
-            height: 130%;
+            width: 100%;
+            max-width: 50%; /* Restrict width to half */
+            height: auto;
         }
 
         .audit-theme2-text {
-            width: 50%;
+            width: 100%;
+            max-width: 50%; /* Restrict width to half */
             padding: 20px;
             color: white;
             border-radius: 10px;
@@ -358,18 +365,18 @@
                 </div>
                 <div class="service-box">
                     <h3>Advisory & Compliance</h3>
-                    <p>Strategic advisory services to help your business navigate financial challenges.</p>
+                    <p>Advisory services for financial planning, tax, and compliance.</p>
                 </div>
                 <div class="service-box">
                     <h3>Outsourcing</h3>
-                    <p>Outsource your back-office operations to focus on what matters most.</p>
+                    <p>Efficient outsourcing for your back office needs.</p>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2025 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+        <p>&copy; 2025 CFAAS - Chartered Financial Accounting and Advisory Services. All rights reserved.</p>
     </footer>
 </body>
 </html>
