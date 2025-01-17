@@ -77,14 +77,40 @@
             border-radius: 5px;
         }
 
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: white;
+            color: black;
+            min-width: 200px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
         main {
             margin-top: 80px;
             padding: 50px 20px;
         }
 
-        h1, h2 {
-            color: Orange;
-            font-size: 40px;
+        h1, h2, h3 {
+            color: orange;
             font-weight: bold;
         }
 
@@ -107,6 +133,9 @@
         .about {
             background-color: #d3d3d3;
             padding: 50px 20px;
+            display: flex;
+            align-items: center;
+            color: white;
         }
 
         .about img {
@@ -118,14 +147,62 @@
             max-width: 600px;
         }
 
+        /* Our Services section */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #d3d3d3;
+        }
+
+        .services h2 {
+            font-size: 35px;
+            font-weight: bold;
+            color: #f37c00;
+        }
+
+        .services p {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .service-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            cursor: pointer;
+        }
+
+        .service-box h3 {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            color: #555;
+        }
+
         footer {
             background-color: #003366;
             color: white;
+            display: flex;              /* Use flexbox */
+            justify-content: center;    /* Center content horizontally */
+            align-items: center;        /* Center content vertically */
             padding: 15px 0;
-            text-align: center;
             margin-top: auto;
-            width: 100%;
-            font-size: 14px;
+            width: 100%;                /* Ensure full width */
+            font-size: 14px;            /* Adjust font size */
         }
     </style>
 </head>
@@ -143,9 +220,27 @@
             </div>
             <div class="nav-item">
                 <a href="#">About Us</a>
+                <div class="dropdown">
+                    <a href="about_overview.html">Overview</a>
+                    <a href="about_leadership.html">Leadership</a>
+                </div>
             </div>
             <div class="nav-item">
                 <a href="#">Services</a>
+                <div class="dropdown">
+                    <a href="services_audit_assurance.html">Audit & Assurance</a>
+                    <a href="services_accounting.html">Accounting</a>
+                    <a href="services_advisory.html">Advisory & Compliance</a>
+                    <a href="services_outsourcing.html">Outsourcing & Back Office</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="#">Resources</a>
+                <div class="dropdown">
+                    <a href="resources_blogs.html">Blogs</a>
+                    <a href="resources_info.html">Latest Info</a>
+                    <a href="resources_templates.html">Sample Templates</a>
+                </div>
             </div>
             <div class="nav-item">
                 <a href="contact.html">Contact Us</a>
@@ -157,23 +252,46 @@
         <!-- Hero Section -->
         <section class="hero">
             <h1>CFAAS Auditors - Expert Auditing & Other Assurance</h1>
-            <p>Your Expert Auditors Offering Clarity, Compliance, and Precise Auditing Services</p>
-        </section>
+            <p><span class="tick">&#10003;</span>Your Expert Auditors Offering Clarity, Compliance and Precise Auditing Services</p>
+            <p><span class="tick">&#10003;</span>CFAAS Offering Strategic Auditing for Higher Business Growth and Maximum Output</p>
+            <p><span class="tick">&#10003;</span>Professional Auditing by CFAAS Turning Audits into Opportunities</p>
+         </section>
 
         <!-- About Section -->
         <section class="about">
-            <div style="display: flex; align-items: center;">
-                <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Audit-theme2.jpg?raw=true" alt="About Us Image">
-                <div class="about-text">
-                    <h2>CFAAS - Your Trusted Fieldwork Specialists</h2>
-                    <p>At CFAAS, we are dedicated to supporting audit firms by delivering exceptional fieldwork auditing services. Our experienced team collaborates closely with other audit firms, conducting comprehensive on-site evaluations and ensuring every aspect of the audit process is executed with diligence and precision. While we do not undertake audits directly, our expertise in fieldwork auditing ensures the outsourced audit process meets the highest professional standards.</p>
-                    <p>We pride ourselves on being a vital extension of audit firms, leveraging our in-depth knowledge and attention to detail to assess the core aspects of businesses. Whether performing testing, verifying compliance, or providing valuable insights into operational and financial controls, our work forms the backbone of a thorough and reliable audit.</p>  
-                    <p>Our services are designed for audit firms handling medium to large enterprises, allowing them to deliver statutory audits with confidence, knowing the fieldwork is managed by experts. At CFAAS, we combine strategic thinking, technical expertise, and a client-focused approach to add value to every engagement.</p>
-                        <h3>Why Do We Need an Audit?</h3>
-                        <p>Across the globe, businesses are subject to various regulatory frameworks that require statutory audits to ensure financial transparency and compliance. Medium and large organizations, including publicly listed companies, are typically mandated by law to undergo annual audits. These audits provide a comprehensive overview of a company’s financial health, assess risks, and confirm adherence to applicable regulations. To maintain credibility and accuracy, statutory audits must be performed by qualified auditors who meet the standards set by their respective jurisdictions.</p>
-                        <p>Globally, a properly conducted statutory audit not only satisfies regulatory requirements but also delivers immense value to stakeholders. It offers directors, shareholders, and other key parties a clear understanding of the company’s financial position, serving as a foundation for strategic planning, funding decisions, and future growth initiatives.</p>
-                        <p>At CFAAS, we specialize in supporting audit firms worldwide by providing high-quality fieldwork services. Our expertise ensures that audits are conducted thoroughly and in compliance with the relevant global standards. Whether your business is navigating international regulations or preparing for expansion, a reliable audit process is essential for building trust and ensuring sustained success.</p>
-                    </div>
+            <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Audit-theme2.jpg?raw=true" alt="About Us Image">
+            <div class="about-text">
+                <h2>CFAAS - Your Trusted Fieldwork Specialists</h2>
+                <p>At CFAAS, we are dedicated to supporting audit firms by delivering exceptional fieldwork auditing services. Our experienced team collaborates closely with other audit firms, conducting comprehensive on-site evaluations and ensuring every aspect of the audit process is executed with diligence and precision. While we do not undertake audits directly, our expertise in fieldwork auditing ensures the outsourced audit process meets the highest professional standards.</p>
+                <p>We pride ourselves on being a vital extension of audit firms, leveraging our in-depth knowledge and attention to detail to assess the core aspects of businesses. Whether performing testing, verifying compliance, or providing valuable insights into operational and financial controls, our work forms the backbone of a thorough and reliable audit.</p>  
+                <p>Our services are designed for audit firms handling medium to large enterprises, allowing them to deliver statutory audits with confidence, knowing the fieldwork is managed by experts. At CFAAS, we combine strategic thinking, technical expertise, and a client-focused approach to add value to every engagement.</p>
+                <h3>Why Do We Need an Audit?</h3>
+                <p>Across the globe, businesses are subject to various regulatory frameworks that require statutory audits to ensure financial transparency and compliance. Medium and large organizations, including publicly listed companies, are typically mandated by law to undergo annual audits. These audits provide a comprehensive overview of a company’s financial health, assess risks, and confirm adherence to applicable regulations. To maintain credibility and accuracy, statutory audits must be performed by qualified auditors who meet the standards set by their respective jurisdictions.</p>
+                <p>Globally, a properly conducted statutory audit not only satisfies regulatory requirements but also delivers immense value to stakeholders. It offers directors, shareholders, and other key parties a clear understanding of the company’s financial position, serving as a foundation for strategic planning, funding decisions, and future growth initiatives.</p>
+                <p>At CFAAS, we specialize in supporting audit firms worldwide by providing high-quality fieldwork services. Our expertise ensures that audits are conducted thoroughly and in compliance with the relevant global standards. Whether your business is navigating international regulations or preparing for expansion, a reliable audit process is essential for building trust and ensuring sustained success.</p>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <p>Find more about our services below</p>
+            <div class="service-boxes">
+                <div class="service-box" onclick="window.location.href='services_audit_assurance.html'">
+                    <h3>Audit & Assurance</h3>
+                    <p>Comprehensive auditing services</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_accounting.html'">
+                    <h3>Accounting</h3>
+                    <p>Efficient accounting services for your business</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_advisory.html'">
+                    <h3>Advisory & Compliance</h3>
+                    <p>Expert advisory and compliance support</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_outsourcing.html'">
+                    <h3>Outsourcing & Back Office</h3>
+                    <p>Optimized back-office solutions</p>
                 </div>
             </div>
         </section>
