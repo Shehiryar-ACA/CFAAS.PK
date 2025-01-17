@@ -13,26 +13,21 @@
             box-sizing: border-box;
         }
 
-        /* Apply flexbox layout to body for sticky footer */
         html, body {
             height: 100%;
             margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
         }
 
-        /* General body styling with background image */
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: black;
             flex: 1 0 auto;
-            text-align: left;
             padding: 0 20px;
         }
 
-        /* Header section */
         header {
             background-color: #003366;
             color: white;
@@ -44,7 +39,7 @@
             top: 0;
             left: 0;
             right: 0;
-            width: 100%; /* Ensure full width */
+            width: 100%;
             z-index: 1000;
         }
 
@@ -55,13 +50,11 @@
 
         .logo-icon {
             width: 40px;
-            height: auto;
             margin-right: 10px;
         }
 
         .logo img {
             width: 150px;
-            height: auto;
         }
 
         nav {
@@ -69,7 +62,6 @@
         }
 
         .nav-item {
-            position: relative;
             margin: 0 20px;
             cursor: pointer;
         }
@@ -78,7 +70,6 @@
             color: white;
             text-decoration: none;
             padding: 10px 15px;
-            display: inline-block;
         }
 
         .nav-item > a:hover {
@@ -86,36 +77,8 @@
             border-radius: 5px;
         }
 
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 40px;
-            left: 0;
-            background-color: white;
-            color: black;
-            min-width: 200px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-        }
-
-        .dropdown a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .dropdown a:hover {
-            background-color: #f0f0f0;
-        }
-
-        .nav-item:hover .dropdown {
-            display: block;
-        }
-
-        /* Main content styling */
         main {
-            margin-top: 80px; /* Adjusted for fixed header */
+            margin-top: 80px;
             padding: 50px 20px;
         }
 
@@ -126,60 +89,28 @@
         }
 
         p {
-            color: White;
             font-size: 20px;
-            font-weight: bold;
             line-height: 1.5;
             max-width: 900px;
-            text-align: left;
             margin: 10px 0;
         }
 
-        /* Hero image section */
         .hero {
             position: relative;
-            background: url('https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Audit-theme.jpg?raw=true') no-repeat center center fixed;
+            background: url('https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Audit-theme.jpg?raw=true') no-repeat center center fixed;
             background-size: cover;
             padding: 150px 20px;
             text-align: center;
             color: white;
         }
 
-        .hero h1 {
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .hero p {
-            font-size: 25px;
-            margin-bottom: 30px;
-        }
-
-        .hero button {
-            padding: 15px 30px;
-            font-size: 20px;
-            background-color: #f37c00;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .hero button:hover {
-            background-color: #d66e00;
-        }
-
-        /* About us section */
         .about {
-            display: flex;
             background-color: #d3d3d3;
             padding: 50px 20px;
-            align-items: center;
         }
 
         .about img {
             width: 50%;
-            object-fit: cover;
             margin-right: 20px;
         }
 
@@ -187,17 +118,14 @@
             max-width: 600px;
         }
 
-        /* Footer */
         footer {
             background-color: #003366;
             color: white;
-            display: flex;              /* Use flexbox */
-            justify-content: center;    /* Center content horizontally */
-            align-items: center;        /* Center content vertically */
             padding: 15px 0;
+            text-align: center;
             margin-top: auto;
-            width: 100%;                /* Ensure full width */
-            font-size: 14px;            /* Adjust font size */
+            width: 100%;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -213,7 +141,15 @@
             <div class="nav-item">
                 <a href="index.html">Home</a>
             </div>
-            <!-- Other navigation items -->
+            <div class="nav-item">
+                <a href="#">About Us</a>
+            </div>
+            <div class="nav-item">
+                <a href="#">Services</a>
+            </div>
+            <div class="nav-item">
+                <a href="contact.html">Contact Us</a>
+            </div>
         </nav>
     </header>
 
@@ -226,20 +162,25 @@
 
         <!-- About Section -->
         <section class="about">
-            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/Audit-theme2.jpg?raw=true" alt="About Us Image">
-            <div class="about-text">
-                <h2>CFAAS - Your Trusted Fieldwork Specialists</h2>
-                <p>At CFAAS, we are dedicated to supporting audit firms...</p>
+            <div style="display: flex; align-items: center;">
+                <img src="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Audit-theme2.jpg?raw=true" alt="About Us Image">
+                <div class="about-text">
+                    <h2>CFAAS - Your Trusted Fieldwork Specialists</h2>
+                    <p>At CFAAS, we are dedicated to supporting audit firms by delivering exceptional fieldwork auditing services. Our experienced team collaborates closely with other audit firms, conducting comprehensive on-site evaluations and ensuring every aspect of the audit process is executed with diligence and precision. While we do not undertake audits directly, our expertise in fieldwork auditing ensures the outsourced audit process meets the highest professional standards.</p>
+                    <p>We pride ourselves on being a vital extension of audit firms, leveraging our in-depth knowledge and attention to detail to assess the core aspects of businesses. Whether performing testing, verifying compliance, or providing valuable insights into operational and financial controls, our work forms the backbone of a thorough and reliable audit.</p>  
+                    <p>Our services are designed for audit firms handling medium to large enterprises, allowing them to deliver statutory audits with confidence, knowing the fieldwork is managed by experts. At CFAAS, we combine strategic thinking, technical expertise, and a client-focused approach to add value to every engagement.</p>
+                        <h3>Why Do We Need an Audit?</h3>
+                        <p>Across the globe, businesses are subject to various regulatory frameworks that require statutory audits to ensure financial transparency and compliance. Medium and large organizations, including publicly listed companies, are typically mandated by law to undergo annual audits. These audits provide a comprehensive overview of a company’s financial health, assess risks, and confirm adherence to applicable regulations. To maintain credibility and accuracy, statutory audits must be performed by qualified auditors who meet the standards set by their respective jurisdictions.</p>
+                        <p>Globally, a properly conducted statutory audit not only satisfies regulatory requirements but also delivers immense value to stakeholders. It offers directors, shareholders, and other key parties a clear understanding of the company’s financial position, serving as a foundation for strategic planning, funding decisions, and future growth initiatives.</p>
+                        <p>At CFAAS, we specialize in supporting audit firms worldwide by providing high-quality fieldwork services. Our expertise ensures that audits are conducted thoroughly and in compliance with the relevant global standards. Whether your business is navigating international regulations or preparing for expansion, a reliable audit process is essential for building trust and ensuring sustained success.</p>
+                    </div>
+                </div>
             </div>
         </section>
-        <div>
-            <h3>Importance of Trusted Audits</h3>
-            <p>Audits establish transparency...</p>
-        </div>
     </main>
 
     <footer>
-        <p>Copyright 2025&copy; All rights reserved.</p>
+        <p>Copyright 2025 &copy; All rights reserved.</p>
     </footer>
 </body>
 </html>
