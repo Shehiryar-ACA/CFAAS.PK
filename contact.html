@@ -6,11 +6,26 @@
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
     <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: black;
+            flex: 1 0 auto;
+            padding: 0 20px;
         }
 
         header {
@@ -21,8 +36,10 @@
             align-items: center;
             padding: 10px 20px;
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
             z-index: 1000;
         }
 
@@ -33,13 +50,11 @@
 
         .logo-icon {
             width: 40px;
-            height: auto;
             margin-right: 10px;
         }
 
         .logo img {
             width: 150px;
-            height: auto;
         }
 
         nav {
@@ -60,7 +75,7 @@
         }
 
         .nav-item > a:hover {
-            background-color: #00509e;
+            background-color: #555;
             border-radius: 5px;
         }
 
@@ -80,7 +95,7 @@
             display: block;
             padding: 10px;
             text-decoration: none;
-            color: #003366;
+            color: #333;
         }
 
         .dropdown a:hover {
@@ -90,23 +105,137 @@
         .nav-item:hover .dropdown {
             display: block;
         }
-
+        
         main {
             margin-top: 80px;
-            padding: 20px;
-            background-color: #ffffff;
-            max-width: 1200px;
-            margin: 80px auto 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px;
+        }
+
+        h1, h2, h3 {
+            color: orange;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            max-width: 900px;
+            margin: 10px 0;
+        }
+
+        .hero {
+        position: relative;
+        background: url('https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/contact%20us.jpg?raw=true') no-repeat center center fixed;
+        background-size: cover;
+        padding: 150px 20px;
+        text-align: left; /* Ensure all text is left-aligned */
+        color: White;
+    }
+
+    .hero h1, .hero p {
+        margin: 0 0 10px; /* Add consistent spacing */
+        max-width: 900px; /* Optional: limit text width for better readability */
+    }
+
+    .hero p {
+        display: flex; /* Optional: for tick alignment */
+        align-items: center;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .tick {
+        margin-right: 10px; /* Space between tick and text */
+    }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #f37c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #d66e00;
+        }
+        .about {
+            background-color: #d3d3d3;
+            padding: 50px 20px;
+            display: flex;
+            align-items: start;
+            color: white;
+            margin-top: 0;
+        }
+
+        .about img {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        /* Our Services section */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #d3d3d3;
+        }
+
+        .services h2 {
+            font-size: 40px;  /* Increased font size */
+            font-weight: bold;
+            color: #f37c00;
+        }
+
+        .services p {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .service-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            cursor: pointer;
+        }
+
+        .service-box h3 {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            color: #555;
         }
 
         footer {
             background-color: #003366;
             color: white;
-            text-align: center;
+            display: flex;              /* Use flexbox */
+            justify-content: center;    /* Center content horizontally */
+            align-items: center;        /* Center content vertically */
             padding: 15px 0;
-            margin-top: 20px;
+            margin-top: auto;
+            width: 100%;                /* Ensure full width */
+            font-size: 14px;            /* Adjust font size */
         }
     </style>
 </head>
@@ -152,73 +281,73 @@
         </nav>
     </header>
 
-    
     <main>
-        <h1>Contact Us</h1>
-        <p>If you have any questions or need further assistance, feel free to reach out to us!</p>
-        <h2>Our Locations</h2>
-        <p>Islamabad (sector A beloved area behria enclave), Peshawar (University town Aman plaza near custom house)</p>
-        <h2>Contact Details</h2>
-        <p>Email: shehiryar@cfaas.online</p>
-        <p>Phone: +92 340 5012432</p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to CFAAS</h1>
+            <p><strong>At CFAAS, we are committed to your success and compliance. Our top priority is ensuring client satisfaction 
+        through tailored solutions that drive growth and efficiency.</strong></p>
+            <p>We currently operate from two strategic locations, providing expert guidance in compliance, financial planning, and business strategy:</p>
+            <p>📍 Islamabad – Sector A, Bahria Enclave</p>
+            <p>📍 Peshawar – University Town, Aman Plaza (Near Custom House)</p>
+            <p>Feel free to reach out to us via email or phone for inquiries, consultations, or direct assistance.</p>
+            <p>📧 Email: <a href="mailto:shehriyar@cfaas.online">shehriyar@cfaas.online</a></p>
+            <p>📞 Phone: <a href="tel:+923405012432">+92 340 5012432</a></p>
+            <p>Let’s connect and take your business to the next level!</p>
+        </section>
+        <!-- About Section -->
+        <section class="about">
+            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/contact%20us-theme%202.jpg?raw=true" alt="About Us Image">
+            <div class="about-text">
+                <h2>Drop Us A Line</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required><br><br>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your Email Address" required><br><br>
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="XXX XXX XXXXX" required><br><br>
+
+            <label for="assistance">How can we assist you?</label>
+            <textarea id="assistance" name="assistance" rows="4" placeholder="Your message" required></textarea><br><br>
+
+            <label for="subscribe">Subscribe to Our Newsletter:</label>
+            <input type="radio" id="yes" name="subscribe" value="Yes" checked>
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="subscribe" value="No">
+            <label for="no">No</label><br><br>
+
+            <button type="submit">Submit</button>
+        </form>            
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <p>Find more about our services below</p>
+            <div class="service-boxes">
+                <div class="service-box" onclick="window.location.href='services_audit_assurance.html'">
+                    <h3>Audit & Assurance</h3>
+                    <p>Comprehensive auditing services</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_accounting.html'">
+                    <h3>Accounting</h3>
+                    <p>Efficient accounting services for your business</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_advisory.html'">
+                    <h3>Advisory & Compliance</h3>
+                    <p>Strategic advisory services and compliance solutions</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <footer>
-        <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+        <p>&copy; 2025 CFAAS Chartered Financial Accounting & Advisory Services. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
