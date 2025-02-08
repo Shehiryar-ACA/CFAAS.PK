@@ -6,11 +6,26 @@
     <title>CFAAS - Chartered Financial Accounting and Advisory Services</title>
     <link rel="icon" href="https://raw.githubusercontent.com/Shehiryar-ACA/CFAAS.PK/main/asset/Icon.ico?raw=true" type="image/x-icon">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: black;
+            flex: 1 0 auto;
+            padding: 0 20px;
         }
 
         header {
@@ -21,8 +36,10 @@
             align-items: center;
             padding: 10px 20px;
             position: fixed;
-            width: 100%;
             top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
             z-index: 1000;
         }
 
@@ -33,13 +50,11 @@
 
         .logo-icon {
             width: 40px;
-            height: auto;
             margin-right: 10px;
         }
 
         .logo img {
             width: 150px;
-            height: auto;
         }
 
         nav {
@@ -60,7 +75,7 @@
         }
 
         .nav-item > a:hover {
-            background-color: #00509e;
+            background-color: #555;
             border-radius: 5px;
         }
 
@@ -80,7 +95,7 @@
             display: block;
             padding: 10px;
             text-decoration: none;
-            color: #003366;
+            color: #333;
         }
 
         .dropdown a:hover {
@@ -90,23 +105,137 @@
         .nav-item:hover .dropdown {
             display: block;
         }
-
+        
         main {
             margin-top: 80px;
-            padding: 20px;
-            background-color: #ffffff;
-            max-width: 1200px;
-            margin: 80px auto 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px;
+        }
+
+        h1, h2, h3 {
+            color: orange;
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 1.5;
+            max-width: 900px;
+            margin: 10px 0;
+        }
+
+        .hero {
+        position: relative;
+        background: url('https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/back%20office-theme%202.jpg?raw=true') no-repeat center center fixed;
+        background-size: cover;
+        padding: 150px 20px;
+        text-align: left; /* Ensure all text is left-aligned */
+        color: White;
+    }
+
+    .hero h1, .hero p {
+        margin: 0 0 10px; /* Add consistent spacing */
+        max-width: 900px; /* Optional: limit text width for better readability */
+    }
+
+    .hero p {
+        display: flex; /* Optional: for tick alignment */
+        align-items: center;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .tick {
+        margin-right: 10px; /* Space between tick and text */
+    }
+
+        .hero button {
+            padding: 15px 30px;
+            font-size: 20px;
+            background-color: #f37c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #d66e00;
+        }
+        .about {
+            background-color: #d3d3d3;
+            padding: 50px 20px;
+            display: flex;
+            align-items: start;
+            color: white;
+            margin-top: 0;
+        }
+
+        .about img {
+            width: 50%;
+            margin-right: 20px;
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        /* Our Services section */
+        .services {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #d3d3d3;
+        }
+
+        .services h2 {
+            font-size: 40px;  /* Increased font size */
+            font-weight: bold;
+            color: #f37c00;
+        }
+
+        .services p {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 40px;
+        }
+
+        .service-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .service-box {
+            background-color: white;
+            padding: 30px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 250px;
+            cursor: pointer;
+        }
+
+        .service-box h3 {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+            color: #555;
         }
 
         footer {
             background-color: #003366;
             color: white;
-            text-align: center;
+            display: flex;              /* Use flexbox */
+            justify-content: center;    /* Center content horizontally */
+            align-items: center;        /* Center content vertically */
             padding: 15px 0;
-            margin-top: 20px;
+            margin-top: auto;
+            width: 100%;                /* Ensure full width */
+            font-size: 14px;            /* Adjust font size */
         }
     </style>
 </head>
@@ -152,76 +281,60 @@
         </nav>
     </header>
 
-    
     <main>
-    <h1>Outsourcing & Back Office Services</h1>
-    <p>Our Outsourcing & Back Office services are designed to streamline your operations and reduce overhead costs. We offer efficient and reliable back-office support to help your business stay focused on its core activities.</p>
-    <ul>
-        <li>Payroll Management</li>
-        <li>Accounting and Bookkeeping Services</li>
-        <li>Audit and Assurance</li>
-        <li>Report and Instruction Over Compliances</li>
-        <li>Financial Reporting and Analysis</li>
-    </ul>
-</main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Outsourcing & Back Office Services</h1>
+            <p><strong>Our Outsourcing & Back Office services are designed to streamline your operations and reduce overhead costs. We offer efficient and reliable back-office support to help your business stay focused on its core activities.</strong></p>
+            <p><span class="tick">&#10003;</span>Payroll Management</p>
+            <p><span class="tick">&#10003;</span>Accounting and Bookkeeping Services</p>
+            <p><span class="tick">&#10003;</span>Audit and Assurance</p>
+            <p><span class="tick">&#10003;</span>Report and Instruction Over Compliances</p>
+            <p><span class="tick">&#10003;</span>Financial Reporting and Analysis</p>
+            <button onclick="window.location.href='contact.html'">Contact Us</button>
+        </section>
+        <!-- About Section -->
+        <section class="about">
+            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/back%20office-theme.jpg?raw=true" alt="About Us Image">
+            <div class="about-text">
+                <h2>Unlock the Power of Outsourcing & Back Office Solutions</h2>
+                <p>At CFAAS, we specialize in delivering outsourcing and back-office solutions that help businesses thrive in an increasingly competitive world.</p>
+                <p>Our comprehensive services—ranging from payroll and accounting to financial reporting and compliance—are designed to optimize operations and empower your business to reach new heights.</p>  
+                <p>By entrusting us with your essential functions, you can focus on what truly matters: driving innovation, enhancing customer experiences, and scaling your business. Our team of experts works tirelessly to ensure your operations are efficient, cost-effective, and fully aligned with the latest industry standards, unlocking the full potential of your business and positioning it for long-term success.</p>
+                <h3>Why Outsourcing is the Key to Business Efficiency</h3>
+                <p>Outsourcing is no longer just a cost-saving measure—it's a strategic business decision that allows organizations to stay ahead of the curve.</p>
+                <p>At CFAAS, we believe that outsourcing your critical back-office operations is the key to achieving sustained efficiency, scalability, and growth. By outsourcing services like payroll management, accounting, financial reporting, and compliance, you gain access to specialized expertise and cutting-edge technology that drives accuracy and innovation.</p>
+                <p>With our tailored solutions, your business can streamline operations, reduce overhead costs, and ensure compliance, all while freeing up valuable internal resources. This enables you to focus on core business functions—innovation, market expansion, and customer satisfaction—ultimately creating a more agile, competitive, and future-ready organization.</p>            
+            </div>
+        </section>
 
+        <!-- Our Services Section -->
+        <section class="services">
+            <h2>Our Services</h2>
+            <p>Find more about our services below</p>
+            <div class="service-boxes">
+                <div class="service-box" onclick="window.location.href='services_audit_assurance.html'">
+                    <h3>Audit & Assurance</h3>
+                    <p>Comprehensive auditing services</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_accounting.html'">
+                    <h3>Accounting</h3>
+                    <p>Efficient accounting services for your business</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_advisory.html'">
+                    <h3>Advisory & Compliance</h3>
+                    <p>Expert advisory and compliance support</p>
+                </div>
+                <div class="service-box" onclick="window.location.href='services_outsourcing.html'">
+                    <h3>Outsourcing & Back Office</h3>
+                    <p>Optimized back-office solutions</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
     <footer>
-        <p>&copy; 2024 CFAAS - Chartered Financial Accounting and Advisory Services. All Rights Reserved.</p>
+        <p>Copyright 2025 &copy; All rights reserved.</p>
     </footer>
 </body>
 </html>
