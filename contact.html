@@ -162,23 +162,63 @@
         .hero button:hover {
             background-color: #d66e00;
         }
-        .about {
-            background-color: #d3d3d3;
-            padding: 50px 20px;
-            display: flex;
-            align-items: start;
-            color: white;
-            margin-top: 0;
-        }
-
-        .about img {
-            width: 50%;
-            margin-right: 20px;
-        }
-
         .about-text {
-            max-width: 600px;
-        }
+        background-color: #003366;
+        color: white;
+        padding: 40px;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .about-text h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .about-text p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+
+    .form-group input[type="radio"] {
+        width: auto;
+        display: inline-block;
+    }
+
+    .form-group button {
+        padding: 12px 30px;
+        font-size: 20px;
+        background-color: #f37c00;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .form-group button:hover {
+        background-color: #d66e00;
+    }
 
         /* Our Services section */
         .services {
@@ -297,27 +337,38 @@
         </section>
         <!-- About Section -->
         <section class="about">
-            <img src="https://github.com/Shehiryar-ACA/CFAAS.PK/blob/main/asset/contact%20us-theme%202.jpg?raw=true" alt="About Us Image">
-            <div class="about-text">
-                <h2>Drop Us A Line</h2>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Your Full Name" required><br><br>
+    <div class="about-text">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like more information about our services, feel free to get in touch with us. We're happy to assist you.</p>
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Your Email Address" required><br><br>
+        <form action="mailto:shehriyar@cfaas.online" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="Full Name" placeholder="Your Full Name" required>
+            </div>
 
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" placeholder="XXX XXX XXXXX" required><br><br>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="Email" placeholder="Your Email Address" required>
+            </div>
 
-            <label for="assistance">How can we assist you?</label>
-            <textarea id="assistance" name="assistance" rows="4" placeholder="Your message" required></textarea><br><br>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="Phone" placeholder="Your Phone Number" required>
+            </div>
 
-            <label for="subscribe">Subscribe to Our Newsletter:</label>
-            <input type="radio" id="yes" name="subscribe" value="Yes" checked>
-            <label for="yes">Yes</label>
-            <input type="radio" id="no" name="subscribe" value="No">
-            <label for="no">No</label><br><br>
+            <div class="form-group">
+                <label for="assistance">How can we assist you?</label>
+                <textarea id="assistance" name="Message" rows="4" placeholder="Your message" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="subscribe">Subscribe to Our Newsletter</label>
+                <input type="radio" id="yes" name="Subscribe" value="Yes" checked>
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="Subscribe" value="No">
+                <label for="no">No</label>
+            </div>
 
             <button type="submit">Submit</button>
         </form>            
